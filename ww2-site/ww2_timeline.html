@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二次世界大戦年表 - 記録全集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- タイプライター風のフォントを追加 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* カスタムフォント「1942.ttf」（年号用） */
+        @font-face {
+            font-family: '1942 Report';
+            src: url('1942.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* カスタムフォント「源界明朝」（日本語用） */
+        @font-face {
+            font-family: 'Genkai Mincho';
+            src: url('Genkai-Mincho-font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* 日本語全体の基本フォントを源界明朝に設定 */
+        body { background-color: #121212; color: #e0e0e0; font-family: 'Genkai Mincho', "Noto Serif JP", serif; letter-spacing: 0.05em; }
+        
+        .accent-text { color: #c6a066; }
+        
+        /* タイプライター風フォントクラス（年号用・固定） */
+        .font-typewriter { font-family: '1942 Report', 'Special Elite', monospace; letter-spacing: 0.05em; font-weight: normal; }
+        
+        /* タイムラインの軸線 */
+        .timeline-container {
+            border-left: 1px solid #333; /* 縦線をボーダーで表現 */
+            padding-left: 2rem;
+            margin-left: 1rem;
+        }
+        
+        /* タイムラインのドット（光るアクセント） */
+        .timeline-dot {
+            position: absolute;
+            left: -2rem; /* padding分を戻す */
+            margin-left: -4.5px; /* ドット幅の半分ずらして線上に乗せる */
+            top: 1.5rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #c6a066;
+            box-shadow: 0 0 12px rgba(198, 160, 102, 0.8);
+        }
+
+        /* 行のホバーアニメーション */
+        .timeline-row {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+        }
+        .timeline-row:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+            transform: translateX(8px); /* 少し右に動く */
+        }
+
+        /* クールなカテゴリタグ */
+        .event-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid #c6a066;
+            color: #c6a066;
+            border-radius: 0.25rem;
+            letter-spacing: 0.1em;
+            background-color: rgba(198, 160, 102, 0.1);
+        }
+        
+        /* 終結用のタグ（色違い） */
+        .tag-end { 
+            border-color: #6b7280; 
+            color: #9ca3af; 
+            background-color: rgba(107, 114, 128, 0.1); 
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 max-w-5xl mx-auto">
+
+    <!-- ナビゲーション -->
+    <nav class="mb-12">
+        <a href="ww2_history_site.html" class="flex items-center text-amber-700 hover:text-amber-500 transition font-bold tracking-widest text-sm">
+            <span class="mr-2">←</span> トップページへ戻る
+        </a>
+    </nav>
+
+    <header class="mb-20 border-b border-gray-800 pb-10">
+        <h1 class="text-4xl md:text-5xl font-bold accent-text drop-shadow-md tracking-wider">年号と出来事</h1>
+        <p class="mt-4 text-gray-400 text-sm md:text-base tracking-widest">1939年から1945年まで、世界を巻き込んだ大戦の記録。</p>
+    </header>
+
+    <!-- 年表エリア（リスト形式） -->
+    <div class="timeline-container ml-2 md:ml-10 space-y-2 pb-20">
+        
+        <!-- 1939年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <a href="event_detail_poland.html" class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer block">
+                <!-- 年号と日付 -->
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1939</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">9月1日</div>
+                </div>
+                <!-- タグ -->
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">開戦</span>
+                </div>
+                <!-- 内容 -->
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">ポーランド侵攻</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">ドイツ軍の電撃戦がポーランドを襲い、欧州での大戦が開始されました。</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- 1940年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1940</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">5月10日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">侵攻</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">西方電撃戦（フランス侵攻）</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">ドイツ軍がベネルクス三国とフランスへ侵攻。わずか1ヶ月余りでフランスが降伏へと追い込まれました。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1940</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">7月10日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">航空戦</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">バトル・オブ・ブリテン</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">ドイツ空軍とイギリス空軍による、史上最大の航空戦が繰り広げられました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1941年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1941</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">6月22日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">侵攻</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">バルバロッサ作戦</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">ドイツがソ連へ突如侵攻を開始。歴史上最大規模の陸戦となる独ソ戦が始まりました。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1941</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">12月8日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">開戦</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">真珠湾攻撃</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">日本軍によるハワイ真珠湾への奇襲攻撃。アメリカの参戦により戦争の規模が最大化しました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1942年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1942</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">6月5日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">海戦</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">ミッドウェー海戦</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">太平洋戦線における重要な転換点。日本海軍が主力空母4隻を失い、米軍が反攻へ転じました。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1942</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">8月23日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">陸戦</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">スターリングラード攻防戦</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">独ソ戦の決定的な転換点。壮絶な市街戦の末、ソ連軍がドイツ軍を包囲・殲滅しました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1944年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1944</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">6月6日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag">上陸戦</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">ノルマンディー上陸作戦</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">史上最大の上陸作戦により、連合国軍がヨーロッパ大陸へ反攻を開始しました。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1945年 -->
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1945</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">5月8日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag tag-end">終結</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">欧州戦線終結（V-E Day）</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">ベルリン陥落後、ドイツ軍が無条件降伏。ヨーロッパにおける戦争が終結しました。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative py-4">
+            <div class="timeline-dot"></div>
+            <div class="timeline-row flex flex-col md:flex-row md:items-start gap-4 md:gap-8 p-4 cursor-pointer">
+                <div class="w-full md:w-32 flex-shrink-0 mt-1">
+                    <div class="text-4xl font-typewriter text-gray-100">1945</div>
+                    <div class="text-sm text-gray-500 mt-1 tracking-widest font-bold">9月2日</div>
+                </div>
+                <div class="w-full md:w-24 flex-shrink-0 mt-1 md:mt-3">
+                    <span class="event-tag tag-end">終結</span>
+                </div>
+                <div class="flex-1 mt-1 md:mt-2">
+                    <h2 class="text-xl md:text-2xl font-bold mb-2 text-gray-100">大戦終結（V-J Day）</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed">戦艦ミズーリ号上での降伏文書調印。6年間にわたる人類史上最大の戦いが正式に終結しました。</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+

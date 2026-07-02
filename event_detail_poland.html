@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポーランド侵攻 - 記録全集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- フォールバック用フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* カスタムフォント「1942.ttf」 */
+        @font-face {
+            font-family: '1942 Report';
+            src: url('1942.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* カスタムフォント「源界明朝」 */
+        @font-face {
+            font-family: 'Genkai Mincho';
+            src: url('Genkai-Mincho-font.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body { 
+            background-color: #121212; 
+            color: #e0e0e0; 
+            font-family: 'Genkai Mincho', "Noto Serif JP", serif; 
+            letter-spacing: 0.05em; 
+        }
+        
+        .accent-text { color: #c6a066; }
+        .dark-card { background-color: #1e1e1e; border: 1px solid #333; }
+        
+        .font-typewriter { 
+            font-family: '1942 Report', 'Special Elite', monospace; 
+            letter-spacing: 0.05em; 
+        }
+
+        /* パンくずリスト（ナビゲーション）のスタイル */
+        .breadcrumb a { color: #888; transition: 0.3s; }
+        .breadcrumb a:hover { color: #c6a066; }
+        .breadcrumb span { color: #555; margin: 0 0.5rem; }
+        
+        /* ジャンルボタン */
+        .nav-btn { 
+            background: #1e1e1e; 
+            border: 1px solid #333; 
+            color: #d1d1d1;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover, .nav-btn.active { 
+            border-color: #c6a066; 
+            color: #c6a066; 
+            background-color: rgba(198, 160, 102, 0.05);
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 max-w-4xl mx-auto">
+
+    <!-- パンくずリスト（どこにでも戻れるナビゲーション） -->
+    <nav class="mb-10 breadcrumb text-sm tracking-widest flex items-center flex-wrap">
+        <a href="ww2_history_site.html" class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            メイン
+        </a>
+        <span class="font-typewriter">/</span>
+        <a href="ww2_timeline.html">年号と出来事</a>
+        <span class="font-typewriter">/</span>
+        <span class="text-amber-700">1939 9月1日</span>
+    </nav>
+
+    <!-- ヘッダー -->
+    <header class="mb-10 border-b border-gray-800 pb-8">
+        <div class="flex items-baseline gap-4 mb-2">
+            <span class="font-typewriter text-4xl text-gray-400">1939</span>
+            <span class="text-xl text-gray-400 tracking-widest">9月1日</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold accent-text mb-4 tracking-widest">ポーランド侵攻</h1>
+        <p class="text-gray-400 text-lg tracking-widest">第二次世界大戦の幕開け</p>
+    </header>
+
+    <!-- ジャンル選択 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <button class="nav-btn active p-3 rounded text-sm tracking-widest">背景</button>
+        <button class="nav-btn p-3 rounded text-sm tracking-widest">作戦詳細</button>
+        <button class="nav-btn p-3 rounded text-sm tracking-widest">使用兵器</button>
+        <button class="nav-btn p-3 rounded text-sm tracking-widest">関連資料</button>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <section class="dark-card p-8 rounded-lg">
+        <h2 class="text-2xl mb-6 accent-text border-l-2 border-amber-800 pl-4 tracking-widest">概要</h2>
+        <p class="leading-relaxed text-gray-300 mb-10 text-lg">
+            <span class="font-typewriter">1939</span>年<span class="font-typewriter">9</span>月<span class="font-typewriter">1</span>日、ドイツ軍はポーランドへ侵攻を開始。この作戦は、戦車部隊と航空機による連携攻撃「電撃戦」の初の本格的実戦として、後の戦況を決定づけるものとなりました。
+        </p>
+        
+        <!-- 追加：提供いただいた「奇妙な戦争」の資料セクション -->
+        <div class="mt-12 border-t border-gray-800 pt-8">
+            <h2 class="text-xl mb-6 text-gray-400 border-l-2 border-gray-600 pl-4 tracking-widest">特記事項：「奇妙な戦争（Phoney War）」</h2>
+            <div class="bg-black/30 p-6 rounded border border-gray-800">
+                <p class="leading-relaxed text-gray-300 text-md mb-4">
+                    <span class="font-typewriter">1939</span>年<span class="font-typewriter">9</span>月<span class="font-typewriter">1</span>日のドイツ軍によるポーランド侵攻に対し、相互援助条約を結んでいたイギリスとフランスはただちに宣戦布告を行い、第二次世界大戦が開戦した。しかし、両国とも軍隊の派遣など直接的な軍事支援を行わず静観の構えをとった。
+                </p>
+                <p class="leading-relaxed text-gray-300 text-md mb-4">
+                    これはイギリスのチェンバレン内閣が依然として宥和政策に固執し、ドイツの真意を見誤っていたためである。ヒトラーもまた、ポーランド作戦の勝利によって英仏を講和に引きずり込もうと思惑を巡らせていた。イタリアも状況を静観し、漁夫の利を狙っていた。
+                </p>
+                <p class="leading-relaxed text-gray-300 text-md mb-6">
+                    海上では封鎖作戦を巡る戦闘があったものの、陸上では<span class="font-typewriter">1940</span>年<span class="font-typewriter">5</span>月まで半年以上にわたり大規模な交戦がないという異常事態が続いた。この不気味なにらみ合いの状況を、フランスでは「<strong class="text-gray-100">奇妙な戦争</strong>」、イギリスでは「<strong class="text-gray-100">いかさま戦争</strong>」と呼んだ。また、後に首相となるチャーチルはこれを「<strong class="text-gray-100">たそがれ戦争</strong>」と称している。
+                </p>
+                
+                <!-- 出典元リンク -->
+                <div class="text-right mt-4 pt-4 border-t border-gray-800">
+                    <a href="https://encyclopedia.ushmm.org/content/ja/article/invasion-of-poland-fall-1939" target="_blank" class="text-xs text-amber-800 hover:text-amber-600 font-typewriter transition">
+                        Source Ref: United States Holocaust Memorial Museum
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 実際の資料（画像）配置エリア -->
+        <div class="mt-12">
+            <h3 class="text-xl mb-4 text-gray-400 border-b border-gray-700 pb-2">【記録写真】国境を越えるドイツ軍部隊</h3>
+            <!-- 画像にgrayscale（白黒）とopacity（少し暗く）をかけて古い写真風にしています -->
+            <img src="https://images.unsplash.com/photo-1580136608260-4ebcefac932e?q=80&w=1000&auto=format&fit=crop" alt="ポーランドへ進軍する部隊のイメージ" class="w-full h-auto grayscale opacity-80 rounded border border-gray-700 shadow-xl">
+            <p class="mt-3 text-sm text-gray-500 text-right font-typewriter">Archive Ref: GER-1939-0901-A</p>
+        </div>
+    </section>
+
+    <footer class="mt-16 text-center text-gray-700 text-sm font-typewriter">
+        &copy; 2026 WWII Historical Record Archive
+    </footer>
+
+</body>
+</html>
+
+
